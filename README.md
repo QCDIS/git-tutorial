@@ -112,3 +112,12 @@ git add README.md
 git commit -m "implement function"
 git push
 ```
+
+## Add new features in parallel 
+
+If you are woking in a team you can assign the implementation of different features to different team members. 
+
+### Implement param_climate_model
+
+### Implement param_species_class
+
