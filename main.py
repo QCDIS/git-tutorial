@@ -29,7 +29,7 @@ conf_y =  0.95
 conf_arrow_length = 0.1
 print(f"Selected Habitat Abbreviation: {selected_hab_abb}")
 
-habitat_number = select_habitat(selected_hab_abb=selected_hab_abb, habitat_name=habitat_name)
+habitat_number = select_habitat(selected_hab_abb=selected_hab_abb, habitat_name=habitat_name, param_species_class=param_species_class)
 
 
 
