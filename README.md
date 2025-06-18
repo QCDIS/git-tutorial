@@ -38,7 +38,7 @@ Open a file editor and create a new file named `main/py` and add the contents fr
 [main.py](main.py) to it.
 
 Also create a new file named `select_habitat.py` and add the contents from 
-[select_habitat.py](select_habitat.py) to it.
+[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/select_habitat.py) to it.
 
 Now you can add the files to the repository using the following command:
 
@@ -103,5 +103,5 @@ To vew the branches, you can use the following command:
 git branch
 ```
 
-
-
+Modify the `select_habitat.py` to implement the `select_habitat` function.
+Set the contents of the `select_habitat.py`  to 
