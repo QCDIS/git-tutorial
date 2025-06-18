@@ -7,7 +7,7 @@ import json
 import os
 
 
-def select_habitat(selected_hab_abb=None, habitat_name=None):
+def select_habitat(selected_hab_abb=None, habitat_name=None, param_climate_model=None):
     """
     Selects a habitat based on the provided string.
 
@@ -25,8 +25,13 @@ def select_habitat(selected_hab_abb=None, habitat_name=None):
     habitat_number = str(
         df_mod[df_mod["hab_name"] == habitat_name]["hab_abb"].values[0])
 
+
+
     filtered_df = df_mod[
-        (df_mod["hab_abb"] == habitat_number)
+        (df_mod["hab_abb"] == habitat_number) &
+        (df_mod["climate_model"] == param_climate_model)
         ]
+
+
 
     return filtered_df
