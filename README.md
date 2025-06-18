@@ -78,3 +78,30 @@ git push origin main
 4. What is the difference between `git add`, `git commit`, and `git push`?
 5. What is the purpose of the `-m` flag in the `git commit` command?
 6. What is the purpose of the `origin` keyword in the `git push` command?
+
+
+## Implement a new feature
+
+The `select_habitat.py` file contains a function that selects a habitat for an alien species.
+However, it is not implemented yet. 
+
+A good practice is to create a new branch for each feature you implement.
+
+
+## Create a new branch
+
+To create a new branch, you can use the following command:
+
+```bash
+git checkout -b select-habitat
+```
+
+Now we have a new branch named `select-habitat` parallel to the `main` branch.
+To vew the branches, you can use the following command:
+
+```bash
+git branch
+```
+
+
+
