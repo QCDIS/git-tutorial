@@ -105,3 +105,9 @@ git branch
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
 Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/select_habitat.py).
+
+Commit the changes and push them to the remote repository 
+```bash
+git commit -m "implement function"
+git push
+```
