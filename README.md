@@ -35,10 +35,10 @@ git clone https://github.com/USER-NAME/git-tutorial
 Go to the folder where you cloned the repository
 
 Open a file editor and create a new file named `main/py` and add the contents from 
-[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/main.py) to it.
+[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/main.py) to it.
 
 Also create a new file named `select_habitat.py` and add the contents from 
-[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/select_habitat.py) to it.
+[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/select_habitat.py) to it.
 
 Now you can add the files to the repository using the following command:
 
