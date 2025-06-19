@@ -43,7 +43,7 @@ Also create a new file named `select_habitat.py` and add the contents from
 Now you can add the files to the repository using the following command:
 
 ```bash
-git add main.py select_habitat.py
+git add app/
 ```
 
 Open the repository in your browser. 
@@ -82,7 +82,8 @@ git push origin main
 
 ## Implement a new feature
 
-The `select_habitat.py` file contains a function that selects a habitat for an alien species.
+The `select_habitat.py` file contains a function that selects a habitat for an 
+alien species.
 However, it is not implemented yet. 
 
 A good practice is to create a new branch for each feature you implement.
@@ -104,7 +105,7 @@ git branch
 ```
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
-Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select_habitat.py).
+Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select-habitat.py).
 
 Commit the changes and push them to the remote repository 
 ```bash
