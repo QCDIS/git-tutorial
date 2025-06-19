@@ -35,10 +35,10 @@ git clone https://github.com/USER-NAME/git-tutorial
 Go to the folder where you cloned the repository
 
 Open a file editor and create a new file named `main/py` and add the contents from 
-[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/main.py) to it.
+[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/main.py) to it.
 
 Also create a new file named `select_habitat.py` and add the contents from 
-[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/select_habitat.py) to it.
+[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/select_habitat.py) to it.
 
 Now you can add the files to the repository using the following command:
 
@@ -104,7 +104,7 @@ git branch
 ```
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
-Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/select_habitat.py).
+Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select_habitat.py).
 
 Commit the changes and push them to the remote repository 
 ```bash
@@ -126,7 +126,7 @@ To implement the `param_climate_model` function, create a new branch named `para
 git checkout -b param_climate_model
 ```
 Now modify the `select_habitat.py` file to implement the `param_climate_model` function.
-The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_climate_model/select_habitat.py).
+The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_climate_model/app/select_habitat.py).
 
 Commit the changes and push them to the remote repository:
 
@@ -144,7 +144,7 @@ To implement the `param_species_class` function, create a new branch named `para
 git checkout -b param_species_class
 ```
 Now modify the `select_habitat.py` file to implement the `param_species_class` function.
-The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_species_class/select_habitat.py).
+The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_species_class/app/select_habitat.py).
 
 
 Commit the changes and push them to the remote repository:
