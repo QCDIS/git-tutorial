@@ -219,5 +219,6 @@ Like implementing the `select_habitat` function, we need to create a new branch 
 git checkout -b docker-setup
 ```
 
-Create a new file named `Dockerfile` in the root of the repository and add the following contents to it:
+Create a new file named `Dockerfile` in the root of the repository and add the following contents [Dockerfile](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/docker-setup/Dockerfile):
+
 
