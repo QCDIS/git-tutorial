@@ -104,10 +104,120 @@ git branch
 ```
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
-Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/select_habitat.py).
+Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select_habitat.py).
 
 Commit the changes and push them to the remote repository 
 ```bash
+git add README.md 
 git commit -m "implement function"
 git push
 ```
+
+## Add new features in parallel 
+
+If you are woking in a team you can assign the implementation of different features to different team members. 
+To do this, you can create a new branch for each feature.
+
+### Implement param_climate_model
+
+To implement the `param_climate_model` function, create a new branch named `param_climate_model`:
+
+```bash
+git checkout -b param_climate_model
+```
+Now modify the `select_habitat.py` file to implement the `param_climate_model` function.
+The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_climate_model/app/select_habitat.py).
+
+Commit the changes and push them to the remote repository:
+
+```bash
+git commit -m "Implement param_climate_model"
+git push origin param-climate-model
+```
+
+
+### Implement param_species_class
+
+To implement the `param_species_class` function, create a new branch named `param_species_class`:
+
+```bash
+git checkout -b param_species_class
+```
+Now modify the `select_habitat.py` file to implement the `param_species_class` function.
+The file should look like this: [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/param_species_class/app/select_habitat.py).
+
+
+Commit the changes and push them to the remote repository:
+
+```bash
+git commit -m "Implement param_species_class"
+git push origin param-species-class
+```
+
+## Merge branches
+
+Now we have three branches: `main`, `select-habitat`, `param_climate_model`, and `param_species_class`.
+
+To look at the branches, you can use the following command:
+
+```bash
+git branch
+```
+To merge the `select-habitat` branch into the `main` branch, you need to switch to the `main` branch first:
+
+```bash
+git checkout main
+git fetch origin
+```
+Now you can merge the `select-habitat` branch into the `main` branch using the following command:
+
+```bash
+git merge select-habitat
+```
+
+If there are no conflicts, the merge will be successful.
+
+We can now push the changes to the remote repository:
+
+```bash
+git push origin main
+```
+
+To merge the `param_climate_model` branch into the `main` branch we run
+
+```bash
+git merge param_climate_model
+```
+
+If there are no conflicts, the merge will be successful.
+
+
+## Issues to consider
+
+1. What is the purpose of creating a new branch for each feature?
+
+# Docker 
+
+To make sure that the code runs on any machine, we can use Docker to create a container with the code and its dependencies.
+
+## Install Docker
+
+### MacOS
+To install Docker on MacOS, you can use https://docs.docker.com/desktop/install/mac-install/
+
+### Windows
+To install Docker on Windows, you can use https://docs.docker.com/desktop/install/windows-install/
+
+
+## Create a Dockerfile
+
+A Dockerfile is a file that contains instructions on how to build a Docker image including the dependencies and the code.
+Like implementing the `select_habitat` function, we need to create a new branch for this task.
+
+
+```bash
+git checkout -b docker-setup
+```
+
+Create a new file named `Dockerfile` in the root of the repository and add the following contents to it:
+
