@@ -13,6 +13,7 @@ arg_parser.add_argument(
     type=str,
     required=True,
     dest='habitat_name',
+    default='forests',
     choices=[
         'forests',
         'open_forests',
@@ -51,7 +52,7 @@ arg_parser.add_argument(
     type=str,
     required=False,
     dest='param_species_class',
-    default='all',
+    default='Liliopsida',
     choices=[ 'Liliopsida', 'Magnoliopsida', 'Pinopsida'],
     help='Species class to use for the simulation. Choices: Liliopsida, Magnoliopsida, Pinopsida'
 )
