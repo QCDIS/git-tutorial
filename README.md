@@ -234,7 +234,30 @@ Now we can build the Docker image using the following command:
 docker build -t git-tutorial .
 ```
 
+## Create a CI/CD workflow to build the Dockerfile
 
+To create a CI/CD workflow with GitHub actions, we will create a YAML file in `.github/workflows/`, which contains the steps for the CI/CD workflow.
 
+Start from the `docker-setup` branch and create a new branch:
 
+```shell
+git checkout -b cicd-workflow
+```
 
+Create a new file named `.github/workflow/ci-pipeline.yaml` and add the following contents to it: [ci-pipeline.yaml](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/cicd-workflow/.github/workflows/ci-pipeline.yaml).
+
+Edit `.github/workflow/ci-pipeline.yaml` to replace `user-name` with your GitHub username (line 14).
+
+Create a new file named `.github/workflow/build-docker.yaml` and add the following contents to it: [build-docker.yaml](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/cicd-workflow/.github/workflows/build-docker.yaml)
+
+Commit and push the changes:
+
+```shell
+git add .github
+git commit -m "add CICD pipeline"
+git push origin cicd-workflow
+```
+
+Check the actions tab in your GitHub repository. What is the workflow doing? Where are its outputs?
+
+Create a release on your repository, and check the Actions tab. What is the workflow doing? Where are its outputs?
