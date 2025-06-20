@@ -23,6 +23,24 @@ To install Git on MacOS, you can use https://git-scm.com/downloads/mac
 
 To install Git on Windows, you can use https://git-scm.com/downloads/win
 
+## Login to GitHub from your device
+
+To edit the remote repository from your device, you need to login to GitHub.
+You have two options:
+
+- **(recommended)** With the [GitHub CLI client](https://cli.github.com/) (`gh`)
+  - Install `gh`, following the [instructions from their website](https://cli.github.com/)
+  - In the terminal, run
+    ```shell
+    gh auth login
+    ```
+  - Follow the steps in the terminal (pick `GitHub.com`, `HTTPS` and `Login with a web browser` when asked)
+  - Follow the steps in the browser
+  - You can now clone repositories using `git clone https://github.com/USER-NAME/REPO-NAME` (see next section)
+- (advanced) With SSH keys
+  - Setup SSH authentication following the [GitHub documentation](https://docs.github.com/en/get-started/git-basics/about-remote-repositories#cloning-with-ssh-urls)
+  - You can now clone repositories using `git clone git@github.com:USER-NAME/REPO-NAME.git`
+
 ## Add new files
 
 Clone the repository to your local machine using the following command 
