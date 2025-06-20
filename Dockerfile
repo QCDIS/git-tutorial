@@ -1,0 +1,8 @@
+FROM python:3-alpine3.22
+
+ADD requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+ADD /app /app
+WORKDIR /app
+
+ENTRYPOINT ["python", "main.py"]

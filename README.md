@@ -229,8 +229,3 @@ Now we can build the Docker image using the following command:
 ```bash
 docker build -t git-tutorial .
 ```
-
-
-
-
-
