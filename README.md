@@ -252,7 +252,9 @@ Now we can build the Docker image using the following command:
 docker build -t git-tutorial .
 ```
 
-## Create a CI/CD workflow to build the Dockerfile
+## CI/CD workflow
+
+In this section, we will create a CI/CD workflow to automatically build the Docker image.
 
 To create a CI/CD workflow with GitHub actions, we will create a YAML file in `.github/workflows/`, which contains the steps for the CI/CD workflow.
 
