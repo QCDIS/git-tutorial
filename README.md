@@ -34,10 +34,10 @@ git clone https://github.com/USER-NAME/git-tutorial
 
 Go to the folder where you cloned the repository
 
-Open a file editor and create a new file named `main/py` and add the contents from 
+Open a file editor and create a new file named `app/main.py` and add the contents from 
 [main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/main.py) to it.
 
-Also create a new file named `select_habitat.py` and add the contents from 
+Also create a new file named `app/select_habitat.py` and add the contents from 
 [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/select_habitat.py) to it.
 
 Now you can add the files to the repository using the following command:
@@ -105,13 +105,13 @@ git branch
 ```
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
-Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select-habitat.py).
+Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select_habitat.py).
 
 Commit the changes and push them to the remote repository 
 ```bash
-git add README.md 
+git add app/select_habitat.py
 git commit -m "implement function"
-git push
+git push origin select-habitat
 ```
 
 ## Add new features in parallel 
@@ -132,8 +132,9 @@ The file should look like this: [select_habitat.py](https://raw.githubuserconten
 Commit the changes and push them to the remote repository:
 
 ```bash
+git add app/select_habitat.py
 git commit -m "Implement param_climate_model"
-git push origin param-climate-model
+git push origin param_climate_model
 ```
 
 
@@ -151,8 +152,9 @@ The file should look like this: [select_habitat.py](https://raw.githubuserconten
 Commit the changes and push them to the remote repository:
 
 ```bash
+git add app/select_habitat.py
 git commit -m "Implement param_species_class"
-git push origin param-species-class
+git push origin param_species_class
 ```
 
 ## Merge branches
@@ -223,6 +225,8 @@ git checkout -b docker-setup
 Create a new file named `Dockerfile` in the root of the repository and add the 
 following contents to it [Dockerfile](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/docker-setup/Dockerfile)
 
+Create a new file named `requirements.txt` in the root of the repository and add the
+following contents to it [requirements.txt](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/docker-setup/requirements.txt)
 
 Now we can build the Docker image using the following command:
 
