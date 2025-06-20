@@ -34,11 +34,11 @@ git clone https://github.com/USER-NAME/git-tutorial
 
 Go to the folder where you cloned the repository
 
-Open a file editor and create a new file named `main/py` and add the contents from 
-[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/main.py) to it.
+Open a file editor and create a new file named `app/main.py` and add the contents from 
+[main.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/main.py) to it.
 
-Also create a new file named `select_habitat.py` and add the contents from 
-[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/select_habitat.py) to it.
+Also create a new file named `app/select_habitat.py` and add the contents from 
+[select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/main/app/select_habitat.py) to it.
 
 Now you can add the files to the repository using the following command:
 
@@ -105,13 +105,13 @@ git branch
 ```
 
 Modify the `select_habitat.py` to implement the `select_habitat` function.
-Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select-habitat.py).
+Set the contents of the `select_habitat.py`  to [select_habitat.py](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/select-habitat/app/select_habitat.py).
 
 Commit the changes and push them to the remote repository 
 ```bash
-git add README.md 
+git add app/select_habitat.py
 git commit -m "implement function"
-git push
+git push origin select-habitat
 ```
 
 ## Add new features in parallel 
@@ -132,8 +132,9 @@ The file should look like this: [select_habitat.py](https://raw.githubuserconten
 Commit the changes and push them to the remote repository:
 
 ```bash
+git add app/select_habitat.py
 git commit -m "Implement param_climate_model"
-git push origin param-climate-model
+git push origin param_climate_model
 ```
 
 
@@ -151,8 +152,9 @@ The file should look like this: [select_habitat.py](https://raw.githubuserconten
 Commit the changes and push them to the remote repository:
 
 ```bash
+git add app/select_habitat.py
 git commit -m "Implement param_species_class"
-git push origin param-species-class
+git push origin param_species_class
 ```
 
 ## Merge branches
@@ -220,5 +222,42 @@ Like implementing the `select_habitat` function, we need to create a new branch 
 git checkout -b docker-setup
 ```
 
-Create a new file named `Dockerfile` in the root of the repository and add the following contents to it:
+Create a new file named `Dockerfile` in the root of the repository and add the 
+following contents to it [Dockerfile](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/docker-setup/Dockerfile)
 
+Create a new file named `requirements.txt` in the root of the repository and add the
+following contents to it [requirements.txt](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/docker-setup/requirements.txt)
+
+Now we can build the Docker image using the following command:
+
+```bash
+docker build -t git-tutorial .
+```
+
+## Create a CI/CD workflow to build the Dockerfile
+
+To create a CI/CD workflow with GitHub actions, we will create a YAML file in `.github/workflows/`, which contains the steps for the CI/CD workflow.
+
+Start from the `docker-setup` branch and create a new branch:
+
+```shell
+git checkout -b cicd-workflow
+```
+
+Create a new file named `.github/workflow/ci-pipeline.yaml` and add the following contents to it: [ci-pipeline.yaml](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/cicd-workflow/.github/workflows/ci-pipeline.yaml).
+
+Edit `.github/workflow/ci-pipeline.yaml` to replace `user-name` with your GitHub username (line 14).
+
+Create a new file named `.github/workflow/build-docker.yaml` and add the following contents to it: [build-docker.yaml](https://raw.githubusercontent.com/QCDIS/git-tutorial/refs/heads/cicd-workflow/.github/workflows/build-docker.yaml)
+
+Commit and push the changes:
+
+```shell
+git add .github
+git commit -m "add CICD pipeline"
+git push origin cicd-workflow
+```
+
+Check the actions tab in your GitHub repository. What is the workflow doing? Where are its outputs?
+
+Create a release on your repository, and check the Actions tab. What is the workflow doing? Where are its outputs?
